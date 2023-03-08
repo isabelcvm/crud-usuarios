@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FormLogin } from '../components/FormLogin';
 import Grid from '@mui/material/Grid';
 import ImageLogin from '../assets/images/login.jpg'
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+
+  const navigate = useNavigate()
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    if (token) {
+      navigate('/register')
+    }
+  }, [])
+
   return (
     <Grid container rowSpacing={1}>
 

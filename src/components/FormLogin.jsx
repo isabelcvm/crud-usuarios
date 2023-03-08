@@ -1,18 +1,25 @@
-import {  Button, TextField } from '@mui/material';
-import { spacing } from '@mui/system';
-import React, { useState } from 'react'
+import React from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import { useForm } from "react-hook-form";
-import Alerta from './Alert';
+import {  Button, TextField } from '@mui/material';
+import { userLogin } from '../features/auth/authActions';
 
+
+import { test } from '../features/users/userSlice';
+
+import Alerta from './Alert';
+import { authLogin } from '../features/auth/authSlice';
 
 export const FormLogin = () => {
 
     const { register, handleSubmit, formState:{errors} } = useForm();
+    const userState = useSelector(state => state.users)
+    const dispatch = useDispatch()
+    
 
     const onSubmitData = data => {
-        console.log(data)
-
-        //Ya tenemos los datos
+        //Ya tenemos los datos    
+        dispatch(authLogin(data))
         
     }
 
