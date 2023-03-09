@@ -1,11 +1,8 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useForm } from "react-hook-form";
-import {  Button, TextField } from '@mui/material';
+import {  Button, TextField, Alert } from '@mui/material';
 import { userLogin } from '../features/auth/authActions';
-
-
-import { test } from '../features/users/userSlice';
 
 import Alerta from './Alert';
 import { authLogin } from '../features/auth/authSlice';
@@ -13,9 +10,8 @@ import { authLogin } from '../features/auth/authSlice';
 export const FormLogin = () => {
 
     const { register, handleSubmit, formState:{errors} } = useForm();
-    const userState = useSelector(state => state.users)
     const dispatch = useDispatch()
-    
+    const { error} = useSelector((state) => state.auth)
 
     const onSubmitData = data => {
         //Ya tenemos los datos    
@@ -24,12 +20,14 @@ export const FormLogin = () => {
     }
 
   return (
-    <form onSubmit={ handleSubmit(onSubmitData) }> 
+    <form onSubmit={ handleSubmit(onSubmitData) }  > 
+   {/* {error && <Alert  variant="outlined" sx={{ mb: 2 }} severity="error"> {error} </Alert>} */}
         <div  >
-            <TextField fullWidth
+            <TextField 
               label="Nombre de usuario"
               sx={{
-                marginBottom: '15px'
+                marginBottom: '15px',
+                width: '100%'
               }}
               {...register('username', {
                 required: {

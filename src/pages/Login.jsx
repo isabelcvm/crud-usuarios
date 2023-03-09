@@ -25,7 +25,7 @@ const Login = () => {
       alignItems: 'center'
     }}  >
        <Grid
-         lg={4} 
+       item
          maxWidth='30%'
          container
           direction="column"
@@ -35,11 +35,12 @@ const Login = () => {
          <img src={imageLogin} alt="Login Imagen" width='100%' sx={{ borderRadius: '20px' }} /> 
         </Grid>
         <Grid
-        container
+          container
           direction="column"
           justifyContent="center"
           alignItems="center"
           lg={8}
+          sx={{ width: '100%' }}
         >
            <h2>Iniciar Sesión</h2> 
             <FormLogin />
