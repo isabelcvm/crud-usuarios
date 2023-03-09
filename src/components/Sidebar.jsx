@@ -1,8 +1,5 @@
 import React from 'react'
 import {ListItem, List, ListItemIcon, ListItemText, Box, ListItemButton, Typography } from '@mui/material'
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
-
 
 const Sidebar = () => {
   return (

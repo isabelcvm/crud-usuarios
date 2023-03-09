@@ -15,6 +15,7 @@ const UserLayout = () => {
           display: 'flex',
           flexDirection: 'column',
           minHeight: '100vh',
+          flex: 1,
           background: '#C2C8D0',
         }}
       >
@@ -23,7 +24,7 @@ const UserLayout = () => {
         <div
           style={{
             display: 'flex',
-            // flex: 1,
+            flex: 1,
             flexDirection: 'column',
           }}
         >

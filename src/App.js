@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import { Provider } from 'react-redux'
 import {store} from "./app/store";
 import Register from "./pages/Register";
+import Users from "./components/Users";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
             <Route path="register" element={ <Register /> } />
           </Route>
           < Route path="/user" element={ <UserLayout /> } >
-            <Route index element={ <Register /> } />
+            <Route index element={ <Users /> } />
           
           </Route>
         </Routes>
