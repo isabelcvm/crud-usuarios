@@ -16,6 +16,7 @@ function App() {
             <Route path="register" element={ <Register /> } />
           </Route>
           < Route path="/user" element={ <UserLayout /> } >
+            <Route index element={ <Register /> } />
           
           </Route>
         </Routes>

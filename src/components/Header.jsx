@@ -1,11 +1,20 @@
 import React from 'react'
-import {Grid} from '@mui/material'
+import {Button, Box, Typography, AppBar, Toolbar, IconButton} from '@mui/material'
+import MenuIcon from '@mui/icons-material/Menu';
 
 const Header = () => {
   return (
-    <Grid maxWidth="100%" sx={{ height: '80px', bgcolor: '#FCFCFC' }} > hola
-
-    </Grid>
+    <Box component="nav" >
+      <AppBar position="static">
+        <Toolbar>
+         
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            UserCRUD
+          </Typography>
+          <Button color="inherit">Cerrar Sesión</Button>
+        </Toolbar>
+      </AppBar>
+    </Box>
   )
 }
 
