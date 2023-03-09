@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
-import { FormLogin } from '../components/FormLogin';
-import Grid from '@mui/material/Grid';
-import ImageLogin from '../assets/images/login.jpg'
 import { useNavigate } from 'react-router-dom';
+import Grid from '@mui/material/Grid';
+import { Box, Container } from '@mui/system';
+import { FormLogin } from '../components/FormLogin';
+import imageLogin from '../assets/images/login.jpg'
 
 const Login = () => {
 
@@ -15,18 +16,36 @@ const Login = () => {
   }, [])
 
   return (
-    <Grid container rowSpacing={1}>
-
-        <Grid md={5}>
-            <div>
-                <img src={ImageLogin} alt="Image Login" width='90%'/>
-            </div>
+    <Container sx={{ background: 'whitesmoke',
+      width: '100%',
+      height: '100vh',
+      borderRadius: '16px',
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center'
+    }}  >
+       <Grid
+         lg={4} 
+         maxWidth='30%'
+         container
+          direction="column"
+         justifyContent="center"
+          alignItems="center"
+        >
+         <img src={imageLogin} alt="Login Imagen" width='100%' sx={{ borderRadius: '20px' }} /> 
         </Grid>
-        <Grid  md={6} >
-            <h2>Iniciar Sesión</h2> 
+        <Grid
+        container
+          direction="column"
+          justifyContent="center"
+          alignItems="center"
+          lg={8}
+        >
+           <h2>Iniciar Sesión</h2> 
             <FormLogin />
+
         </Grid>
-    </Grid>
+    </Container>
   )
 }
 

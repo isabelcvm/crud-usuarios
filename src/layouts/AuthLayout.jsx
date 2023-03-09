@@ -5,9 +5,9 @@ import Container from '@mui/material/Container';
 export const AuthLayout = () => {
   return (
     <>
-      <Container maxWidth="100%"
+      <Container 
         sx= {{
-          padding:'20px', bgcolor: '#E8ECF1',
+          padding:'20px' ,width: '100%',
         }}
       >
         <Outlet />
