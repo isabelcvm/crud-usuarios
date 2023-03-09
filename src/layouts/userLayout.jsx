@@ -23,21 +23,23 @@ const UserLayout = () => {
         <div
           style={{
             display: 'flex',
-            flex: 1,
+            // flex: 1,
+            flexDirection: 'column',
           }}
         >
 
-          <Sidebar />
-
+          <Header />
           <main
             style={{
               display: 'flex',
-              flexDirection: 'column',
+              flexDirection: 'row',
               flex: 1,
               background: '#E8ECF1',
+              
             }}
           >
-            <Header />
+          <Sidebar />
+          
             <Outlet />
           </main>
         </div>

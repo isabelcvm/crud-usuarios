@@ -4,7 +4,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <Box sx={{ px: 10, py:4 }}>
+    <Box sx={{ px: 10, py:3 }}>
         <Typography align="center" > Todos los derechos reservados </Typography> 
     </Box>
   )
