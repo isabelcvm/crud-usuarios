@@ -27,7 +27,6 @@ export const FormRegister = () => {
         autoComplete="off"
       >
         <TextField
-
           label="Nombre"
           sx={{
             marginBottom: '20px',

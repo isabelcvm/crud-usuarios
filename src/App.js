@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={ <AuthLayout /> } >
             <Route index element={ <Login /> } />
-            <Route path="register" element={ <Register /> } />
+            <Route path="registro" element={ <Register /> } />
           </Route>
           < Route path="/usuario" element={ <UserLayout /> } >
             <Route index element={ <Users /> } />
