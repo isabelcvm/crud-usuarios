@@ -1,11 +1,21 @@
 import React from 'react'
-import {Grid} from '@mui/material'
+import {ListItem, List, ListItemIcon, ListItemText, Box, ListItemButton, Typography } from '@mui/material'
 
 const Sidebar = () => {
   return (
-    <Grid lg={4} maxWidth="100%" sx={{ height: '100px', width:'50px', bgcolor: '#FCFCFC' }}>
+    <Box
+      sx={{ width: '13%', bgcolor:'whitesmoke' }}
 
-    </Grid>
+    >
+      <List>
+          <Typography variant="h5" >
+            Bienvenido
+          </Typography>
+          <Typography variant="h7" component="p" >
+            Isabel
+          </Typography>
+      </List>
+    </Box>
   )
 }
 

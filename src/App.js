@@ -5,6 +5,10 @@ import Login from "./pages/Login";
 import { Provider } from 'react-redux'
 import {store} from "./app/store";
 import Register from "./pages/Register";
+import Users from "./components/Users";
+import User from "./components/User";
+import CreateUser from "./components/CreateUser";
+import EditUser from "./components/EditUser";
 
 function App() {
   return (
@@ -15,7 +19,11 @@ function App() {
             <Route index element={ <Login /> } />
             <Route path="register" element={ <Register /> } />
           </Route>
-          < Route path="/user" element={ <UserLayout /> } >
+          < Route path="/usuario" element={ <UserLayout /> } >
+            <Route index element={ <Users /> } />
+            <Route path="crear-usuario" element={ <CreateUser /> } />
+            <Route path=":id" element={ <User /> } />
+            <Route path="editar/:id" element={ <EditUser /> } />
           
           </Route>
         </Routes>

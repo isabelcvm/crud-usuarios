@@ -4,20 +4,52 @@ import { Navigate, Outlet } from 'react-router-dom'
 import { Box } from '@mui/material';
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar';
+import Footer from '../components/Footer';
 
 const UserLayout = () => {
   return (
     <>
-        <Header />
-        <Container maxWidth="100%" sx={{bgcolor: '#DFEAF7', height: '100vh' }}>
-        <Sidebar />
-            <Box>
-                <main>
-                    <Outlet />
-                </main>
-            </Box>
+      {/* Container */}
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          minHeight: '100vh',
+          flex: 1,
+          background: '#C2C8D0',
+        }}
+      >
 
-        </Container>
+        {/* Content */}
+        <div
+          style={{
+            display: 'flex',
+            flex: 1,
+            flexDirection: 'column',
+          }}
+        >
+
+          <Header />
+          <main
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              flex: 1,
+              background: '#E8ECF1',
+              
+            }}
+          >
+          <Sidebar />
+          
+            <Outlet />
+          </main>
+        </div>
+
+        {/* Footer */}
+        <div>
+            <Footer />
+        </div>
+      </div>
     </>
   )
 }
