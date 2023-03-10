@@ -6,10 +6,10 @@ const Alerta = ({ alerta }) => {
     return (
         <Alert
             variant="outlined"
-            sx={{ mb: 2 }}
+            sx={{ marginBottom: 5 }}
             severity="error"
         >
-            {alerta.message}
+            {alerta.msg}
         </Alert>
     )
 }

@@ -1,22 +1,12 @@
 import configAxios from "../../config/configAxios";
 
 
-export const addUser = async (state, {payload}) => {
-    console.log(payload)
+export const addUser = async (datos) => {
+  try {
+    const { data } = await configAxios.post('/registerUser', datos)
+    
+  } catch (error) {
+    console.log(error)
+  }
 
-    const token = localStorage.getItem('token')
-    if (!token) return
-    const config = {
-      headers: {
-        'Content-Type': 'application/json',
-        'token': token
-      },
-    }
-    try {
-         const {data} = await configAxios.post('/registerUser', payload ,config  )
-         console.log(data)
-      } catch (error) {
-        console.log(error)
-      }
- 
 }

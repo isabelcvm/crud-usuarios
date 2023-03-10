@@ -12,6 +12,7 @@ const Register = () => {
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center'
+      
     }}  >
        <Grid
          lg={4} 
